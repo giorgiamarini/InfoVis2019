@@ -75,9 +75,9 @@ svg.selectAll("circle")
         svgCircles.forEach(function(element, index){
             d3.select("#b"+ index)
                 .transition().duration(2000)
-                .attr("r", circles[v].y)
-                .attr("cx", circles[v].r)
-                .attr("cy", circles[v].x);
+                .attr("r", circles[v].y * 0.10)
+                .attr("cx", circles[v].r * 10)
+                .attr("cy", circles[v].x * 0.60);
             v++;
 
         });
@@ -91,9 +91,9 @@ svg.selectAll("circle")
             svgCircles.forEach(function(element, index){
                 d3.select("#b"+ index)
                     .transition().duration(2000)
-                    .attr("r", circles[v].x)
-                    .attr("cx", circles[v].y)
-                    .attr("cy", circles[v].r);
+                    .attr("r", circles[v].x * 0.10)
+                    .attr("cx", circles[v].y * 0.60)
+                    .attr("cy", circles[v].r * 10);
                 v++;
 
             });
