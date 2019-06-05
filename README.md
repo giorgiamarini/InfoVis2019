@@ -12,6 +12,6 @@ utilizzata per i raggi, la seconda per le x e la terza per le y.
 Cliccando una terza volta si torna alla visualizzazione iniziale. Fai in
 modo che le trasformazioni siano continue e non a salti.
 
-Il file bubblechart.js contiene la versione del codice in cui i cerchi si generano con coordinate e raggio randomiche.ù
+Il file bubblechart.js contiene la versione del codice in cui i cerchi si generano con coordinate e raggio randomiche.
 
 Il file bubblechart2.js contiene la versione del codice in cui i cerchi vengono generati sulla base di dati presi dal file data.json.
