@@ -48,7 +48,6 @@ while (i < 20) {
 
     if (!overlap) {
         circles.push({x: x, y: y, r: r});
-        console.log({x:x, y: y, r:r});
 
         let circle = svg.append("circle")
             .attr("id", "b"+id_index)
@@ -70,7 +69,6 @@ svg.selectAll("circle")
     .on("click", function(){
         if (clickNumber == 0){
             console.log("click 1");
-            console.log(clickNumber);
         let v = 0;
         svgCircles.forEach(function(element, index){
             d3.select("#b"+ index)
@@ -86,7 +84,6 @@ svg.selectAll("circle")
         else {
         if (clickNumber == 1) {
             console.log("click 2");
-            console.log(clickNumber);
             let v = 0;
             svgCircles.forEach(function(element, index){
                 d3.select("#b"+ index)
