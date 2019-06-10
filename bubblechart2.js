@@ -53,11 +53,13 @@ d3.json("data.json").then(function(data){
                 console.log("click 1");
                 let v = 0;
                 svgCircles.forEach(function(element, index){
+                    console.log(("#b"+ index) === id[v]);
                     d3.select("#b"+ index)
                         .transition().duration(2000)
                         .attr("r", circles[v].y * 0.10)
                         .attr("cx", circles[v].r * 10)
                         .attr("cy", circles[v].x * 0.60);
+
                     v++;
 
                 });
