@@ -33,7 +33,7 @@ d3.json("data.json").then(function(data){
 
     for (let i = 0; i < 20; i++){
         let circle = svg.append("circle")
-            .attr("id", "#b"+i)
+            .attr("id", "b"+i)
             .attr("cx", circles[i].x)
             .attr("cy", circles[i].y)
             .attr("r", circles[i].r)
@@ -46,14 +46,20 @@ d3.json("data.json").then(function(data){
         id.push("#b"+ i);
     }
 
+    //svgCircles = d3.selectAll("circle");
+
+    console.log(d3.selectAll("circle"));
+
     var clickNumber = 0;
-    svg.selectAll("circle")
-        .on("click", function(){
+    svg.selectAll("circle").on("click", function(){
             if (clickNumber == 0){
                 console.log("click 1");
                 let v = 0;
                 svgCircles.forEach(function(element, index){
                     console.log(("#b"+ index) === id[v]);
+                    console.log(d3.select("#b"+ index));
+                    console.log(v);
+                    console.log(circles[v]);
                     d3.select("#b"+ index)
                         .transition().duration(2000)
                         .attr("r", circles[v].y * 0.10)
